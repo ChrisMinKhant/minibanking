@@ -1,4 +1,4 @@
-2023.07.10 21:54:59.331 [INFO] com.intern.rest.MinibankingApplicationTests: Starting MinibankingApplicationTests using Java 11.0.19 on DESKTOP-3BVQFL9 with PID 5912 (started by MSI in C:\Users\MSI\Desktop\rest)
-2023.07.10 21:54:59.340 [DEBUG] com.intern.rest.MinibankingApplicationTests: Running with Spring Boot v2.7.13, Spring v5.3.28
-2023.07.10 21:54:59.340 [INFO] com.intern.rest.MinibankingApplicationTests: No active profile set, falling back to 1 default profile: "default"
-2023.07.10 21:55:01.920 [INFO] com.intern.rest.MinibankingApplicationTests: Started MinibankingApplicationTests in 2.855 seconds (JVM running for 4.116)
+2023.07.10 22:04:17.522 [INFO] com.intern.rest.MinibankingApplicationTests: Starting MinibankingApplicationTests using Java 11.0.19 on DESKTOP-3BVQFL9 with PID 12016 (started by MSI in C:\Users\MSI\Desktop\rest)
+2023.07.10 22:04:17.530 [DEBUG] com.intern.rest.MinibankingApplicationTests: Running with Spring Boot v2.7.13, Spring v5.3.28
+2023.07.10 22:04:17.532 [INFO] com.intern.rest.MinibankingApplicationTests: No active profile set, falling back to 1 default profile: "default"
+2023.07.10 22:04:19.725 [INFO] com.intern.rest.MinibankingApplicationTests: Started MinibankingApplicationTests in 2.476 seconds (JVM running for 3.661)

@@ -24,8 +24,12 @@ import java.util.stream.Collectors;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
-    @Autowired
     private CustomerRepository customerRepository;
+    @Autowired
+    CustomerServiceImpl(CustomerRepository customerRepository)
+    {
+        this.customerRepository = customerRepository;
+    }
 
     @Override
     public List<CustomerResponse> findAll() {

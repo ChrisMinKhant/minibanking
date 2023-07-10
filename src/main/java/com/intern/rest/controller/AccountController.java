@@ -4,6 +4,7 @@ import com.intern.rest.entity.Account;
 import com.intern.rest.model.account.NewAccountRequest;
 import com.intern.rest.model.account.UpdateAccountRequest;
 import com.intern.rest.service.AccountService;
+import com.intern.rest.service.implementations.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,8 +15,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class AccountController {
-    @Autowired
+
     private AccountService accountService;
+    @Autowired
+    AccountController(AccountServiceImpl accountService)
+    {
+        this.accountService = accountService;
+    }
 
     @GetMapping("/accounts")
     public ResponseEntity<List<Account>> getAllAccounts()
