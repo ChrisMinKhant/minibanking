@@ -15,6 +15,9 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,9 +32,9 @@ public class CustomerServiceImpl implements CustomerService {
         List<Customer> customerList = customerRepository.findAll();
 
         List<CustomerResponse> customerResponseList = customerList.stream()
-                .map(customer -> new CustomerResponse(customer.getId(),customer.getName()
-                        ,customer.getNrc(),customer.getDateOfBirth(),customer.getFatherName()
-                        ,customer.getMobileNumber(),customer.getUserName())).collect(Collectors.toList());
+            .map(customer -> new CustomerResponse(customer.getId(), customer.getName()
+                    , customer.getNrc(), customer.getDateOfBirth(), customer.getFatherName()
+                    , customer.getMobileNumber(), customer.getUserName())).collect(Collectors.toList());
 
         return customerResponseList;
     }
@@ -54,7 +57,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void save(NewCustomerRequest customer) {
+    public Boolean save(NewCustomerRequest customer) {
+
+        if(this.usernameChecker(customer.getUsername()))
+        {
+            return false;
+        }
 
         ObjectId objectId = new ObjectId();
 
@@ -63,6 +71,8 @@ public class CustomerServiceImpl implements CustomerService {
                 customer.getMobileNumber(),customer.getUsername(),customer.getPassword());
 
         customerRepository.save(temporaryCustomer);
+
+        return true;
     }
 
     @Override
@@ -84,5 +94,12 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customer = customerRepository.findByUsername(username);
 
         customerRepository.delete(customer);
+    }
+
+    private Boolean usernameChecker(String username)
+    {
+        Customer customer = customerRepository.findByUsername(username);
+
+        return customer != null ? true : false;
     }
 }

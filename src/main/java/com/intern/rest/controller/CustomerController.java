@@ -21,8 +21,14 @@ import java.util.Random;
 @RequestMapping("/api")
 @RestController
 public class CustomerController {
-    @Autowired
+
     private CustomerService customerService;
+
+    @Autowired
+    CustomerController(CustomerServiceImpl customerService)
+    {
+        this.customerService = customerService;
+    }
 
     @GetMapping("/customers")
     public ResponseEntity<List<CustomerResponse>> getAllCustomers()
@@ -43,9 +49,12 @@ public class CustomerController {
     @PostMapping("/customers")
     public ResponseEntity<String> createNewCustomers(@RequestBody NewCustomerRequest newCustomerRequest)
     {
-        customerService.save(newCustomerRequest);
+        if(customerService.save(newCustomerRequest))
+        {
+            return new ResponseEntity<String>("You Created New Customer!", HttpStatus.OK);
+        }
 
-        return new ResponseEntity<String>("You Created New Customer!", HttpStatus.OK);
+        return new ResponseEntity<String>("The username has already taken!", HttpStatus.BAD_REQUEST);
     }
 
     @PutMapping("/customers/{username}")

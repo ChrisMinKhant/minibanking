@@ -13,7 +13,7 @@ public interface CustomerService {
 
     CustomerResponse findByUsername(String username);
 
-    void save(NewCustomerRequest customer);
+    Boolean save(NewCustomerRequest customer);
 
     void update(String username,UpdateCustomerRequest Updatecustomer);
 

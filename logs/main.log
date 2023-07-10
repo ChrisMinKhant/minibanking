@@ -1,0 +1,177 @@
+2023.07.10 22:04:31.095 [INFO] com.intern.rest.MinibankingApplication: Starting MinibankingApplication using Java 11.0.19 on DESKTOP-3BVQFL9 with PID 13980 (C:\Users\MSI\Desktop\rest\target\classes started by MSI in C:\Users\MSI\Desktop\rest)
+2023.07.10 22:04:31.101 [DEBUG] com.intern.rest.MinibankingApplication: Running with Spring Boot v2.7.13, Spring v5.3.28
+2023.07.10 22:04:31.102 [INFO] com.intern.rest.MinibankingApplication: No active profile set, falling back to 1 default profile: "default"
+2023.07.10 22:04:32.536 [INFO] com.intern.rest.MinibankingApplication: Started MinibankingApplication in 1.693 seconds (JVM running for 2.296)
+2023.07.10 22:10:58.022 [INFO] com.intern.rest.MinibankingApplication: Starting MinibankingApplication using Java 11.0.19 on DESKTOP-3BVQFL9 with PID 13980 (C:\Users\MSI\Desktop\rest\target\classes started by MSI in C:\Users\MSI\Desktop\rest)
+2023.07.10 22:10:58.023 [DEBUG] com.intern.rest.MinibankingApplication: Running with Spring Boot v2.7.13, Spring v5.3.28
+2023.07.10 22:10:58.023 [INFO] com.intern.rest.MinibankingApplication: No active profile set, falling back to 1 default profile: "default"
+2023.07.10 22:10:58.396 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'customerService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.intern.rest.service.CustomerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023.07.10 22:10:58.435 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerService in com.intern.rest.controller.CustomerController required a bean of type 'com.intern.rest.service.CustomerService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.intern.rest.service.CustomerService' in your configuration.
+
+2023.07.10 22:10:59.916 [INFO] com.intern.rest.MinibankingApplication: Starting MinibankingApplication using Java 11.0.19 on DESKTOP-3BVQFL9 with PID 13980 (C:\Users\MSI\Desktop\rest\target\classes started by MSI in C:\Users\MSI\Desktop\rest)
+2023.07.10 22:10:59.917 [DEBUG] com.intern.rest.MinibankingApplication: Running with Spring Boot v2.7.13, Spring v5.3.28
+2023.07.10 22:10:59.917 [INFO] com.intern.rest.MinibankingApplication: No active profile set, falling back to 1 default profile: "default"
+2023.07.10 22:11:00.228 [INFO] com.intern.rest.MinibankingApplication: Started MinibankingApplication in 0.343 seconds (JVM running for 389.988)
+2023.07.10 22:12:29.779 [INFO] com.intern.rest.MinibankingApplication: Starting MinibankingApplication using Java 11.0.19 on DESKTOP-3BVQFL9 with PID 13980 (C:\Users\MSI\Desktop\rest\target\classes started by MSI in C:\Users\MSI\Desktop\rest)
+2023.07.10 22:12:29.780 [DEBUG] com.intern.rest.MinibankingApplication: Running with Spring Boot v2.7.13, Spring v5.3.28
+2023.07.10 22:12:29.780 [INFO] com.intern.rest.MinibankingApplication: No active profile set, falling back to 1 default profile: "default"
+2023.07.10 22:12:30.029 [INFO] com.intern.rest.MinibankingApplication: Started MinibankingApplication in 0.274 seconds (JVM running for 479.79)
+2023.07.10 22:12:31.612 [INFO] com.intern.rest.MinibankingApplication: Starting MinibankingApplication using Java 11.0.19 on DESKTOP-3BVQFL9 with PID 13980 (C:\Users\MSI\Desktop\rest\target\classes started by MSI in C:\Users\MSI\Desktop\rest)
+2023.07.10 22:12:31.613 [DEBUG] com.intern.rest.MinibankingApplication: Running with Spring Boot v2.7.13, Spring v5.3.28
+2023.07.10 22:12:31.613 [INFO] com.intern.rest.MinibankingApplication: No active profile set, falling back to 1 default profile: "default"
+2023.07.10 22:12:31.837 [INFO] com.intern.rest.MinibankingApplication: Started MinibankingApplication in 0.245 seconds (JVM running for 481.597)
+2023.07.10 22:12:53.942 [ERROR] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/].[dispatcherServlet]: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.IncorrectResultSizeDataAccessException: Query { "$java" : Query: { "userName" : "kaungminkhant@yomabank.com"}, Fields: {}, Sort: {} } returned non unique result.] with root cause
+org.springframework.dao.IncorrectResultSizeDataAccessException: Query { "$java" : Query: { "userName" : "kaungminkhant@yomabank.com"}, Fields: {}, Sort: {} } returned non unique result.
+	at org.springframework.data.mongodb.core.ExecutableFindOperationSupport$ExecutableFindSupport.oneValue(ExecutableFindOperationSupport.java:139) ~[spring-data-mongodb-3.4.13.jar:3.4.13]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.lambda$getExecution$6(AbstractMongoQuery.java:188) ~[spring-data-mongodb-3.4.13.jar:3.4.13]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.doExecute(AbstractMongoQuery.java:152) ~[spring-data-mongodb-3.4.13.jar:3.4.13]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.execute(AbstractMongoQuery.java:127) ~[spring-data-mongodb-3.4.13.jar:3.4.13]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.28.jar:5.3.28]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.28.jar:5.3.28]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.28.jar:5.3.28]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.28.jar:5.3.28]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241) ~[spring-aop-5.3.28.jar:5.3.28]
+	at com.sun.proxy.$Proxy106.findByUsername(Unknown Source) ~[?:?]
+	at com.intern.rest.service.implementations.CustomerServiceImpl.usernameChecker(CustomerServiceImpl.java:101) ~[classes/:?]
+	at com.intern.rest.service.implementations.CustomerServiceImpl.save(CustomerServiceImpl.java:62) ~[classes/:?]
+	at com.intern.rest.controller.CustomerController.createNewCustomers(CustomerController.java:52) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.76.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.76.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+2023.07.10 22:13:29.143 [ERROR] org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/].[dispatcherServlet]: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.IncorrectResultSizeDataAccessException: Query { "$java" : Query: { "userName" : "kaungminkhant@yomabank.com"}, Fields: {}, Sort: {} } returned non unique result.] with root cause
+org.springframework.dao.IncorrectResultSizeDataAccessException: Query { "$java" : Query: { "userName" : "kaungminkhant@yomabank.com"}, Fields: {}, Sort: {} } returned non unique result.
+	at org.springframework.data.mongodb.core.ExecutableFindOperationSupport$ExecutableFindSupport.oneValue(ExecutableFindOperationSupport.java:139) ~[spring-data-mongodb-3.4.13.jar:3.4.13]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.lambda$getExecution$6(AbstractMongoQuery.java:188) ~[spring-data-mongodb-3.4.13.jar:3.4.13]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.doExecute(AbstractMongoQuery.java:152) ~[spring-data-mongodb-3.4.13.jar:3.4.13]
+	at org.springframework.data.mongodb.repository.query.AbstractMongoQuery.execute(AbstractMongoQuery.java:127) ~[spring-data-mongodb-3.4.13.jar:3.4.13]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.28.jar:5.3.28]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76) ~[spring-data-commons-2.7.13.jar:2.7.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.28.jar:5.3.28]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.28.jar:5.3.28]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.28.jar:5.3.28]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241) ~[spring-aop-5.3.28.jar:5.3.28]
+	at com.sun.proxy.$Proxy106.findByUsername(Unknown Source) ~[?:?]
+	at com.intern.rest.service.implementations.CustomerServiceImpl.delete(CustomerServiceImpl.java:94) ~[classes/:?]
+	at com.intern.rest.controller.CustomerController.deleteCustomer(CustomerController.java:72) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:561) ~[tomcat-embed-core-9.0.76.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.76.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]

@@ -18,6 +18,7 @@ import java.util.Date;
 public class Customer {
     @Id
     private String id;
+
     private String name;
     private String nrc;
     private Date dateOfBirth;
