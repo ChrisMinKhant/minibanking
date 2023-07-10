@@ -1,19 +1,21 @@
 package com.intern.rest.service;
 
 import com.intern.rest.entity.Customer;
+import com.intern.rest.model.customer.CustomerResponse;
 import com.intern.rest.model.customer.NewCustomerRequest;
+import com.intern.rest.model.customer.UpdateCustomerRequest;
 
 import java.util.List;
 
 public interface CustomerService {
 
-    List<Customer> findAll();
+    List<CustomerResponse> findAll();
 
-    List<Customer> findByUsername(String username);
+    CustomerResponse findByUsername(String username);
 
     void save(NewCustomerRequest customer);
 
-    void update(Customer customer);
+    void update(String username,UpdateCustomerRequest Updatecustomer);
 
-    void delete(String customer);
+    void delete(String username);
 }
